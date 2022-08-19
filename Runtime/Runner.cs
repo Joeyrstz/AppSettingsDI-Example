@@ -2,18 +2,16 @@ using Microsoft.Extensions.Logging;
 
 namespace Runtime;
 
-public class Runner
+public class Runner : IRunner
 {
     private readonly ILogger<Runner> _logger;
-    private int _startNumber;
 
-    public Runner(ILogger<Runner> logger, int startNumber)
+    public Runner(ILogger<Runner> logger)
     {
         _logger = logger;
-        this._startNumber = startNumber;
     }
-    public async Task RunAsync()
+    public void Run()
     {
-        
+        Console.WriteLine("Test");
     }
 }
